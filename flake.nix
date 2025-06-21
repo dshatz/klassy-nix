@@ -18,18 +18,14 @@
 
             klassy-qt6 = {pkgs, ...}: pkgs.stdenv.mkDerivation rec {
               pname = "klassy";
-              version = "6.2.1";
+              version = "6.4.0";
 
               src = pkgs.fetchFromGitHub {
                 owner = "paulmcauley";
                 repo = pname;
-                rev = "6.2.breeze6.2.1";
-                sha256 = "sha256-tFqze3xN1XECY74Gj0nScis7DVNOZO4wcfeA7mNZT5M=";
+                rev = "6.4.breeze6.4.0";
+                sha256 = "sha256-+bYS2Upr84BS0IdA0HlCK0FF05yIMVbRvB8jlN5EOUM=";
               };
-
-              patches = [
-                ./project-version.patch
-              ];
 
               cmakeFlags = ["-DBUILD_TESTING=OFF" "-DBUILD_QT5=OFF"];
 
