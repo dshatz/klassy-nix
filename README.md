@@ -13,6 +13,6 @@ configuration.nix
 
 environment.systemPackages = [
 ...
-    inputs.klassy.packages.${system}.klassy
+    inputs.klassy.packages.${system}.default
 ];
 ```
